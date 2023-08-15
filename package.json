@@ -1,15 +1,19 @@
 {
-  "name": "Snippets",
+  "name": "clerkdocs-snippets",
   "displayName": "ClerkDocs Snippets",
   "description": "This extension provides code snippets for Clerk from its official documentation.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.81.0"
   },
-  "icon":"icon.png", 
+  "icon": "icon.png",
   "categories": [
     "Snippets"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/musebe/clerk-vscode-snippets"
+  },
   "contributes": {
     "snippets": [
       {

@@ -37,5 +37,3 @@ Type the desired prefix from the table above in a JavaScript or React file in VS
 If you have suggestions or improvements, please open an issue or submit a pull request.
 
 ---
-
-The badges now link to the official websites of Clerk and Next.js. Users can click on the badges to be directed to the respective websites for more information.

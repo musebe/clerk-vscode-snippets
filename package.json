@@ -21,5 +21,21 @@
         "path": "./snippets/snippets.code-snippets"
       }
     ]
-  }
+  },
+  "devDependencies": {
+    "vsce": "^2.15.0"
+  },
+  "keywords": [
+    "clerk",
+    "snippets",
+    "documentation",
+    "auth",
+    "authentication",
+    "vscode",
+    "extension",
+    "code snippets",
+    "clerk integration"
+  ],
+  "license": "MIT",
+  "author": "Musebecodes"
 }

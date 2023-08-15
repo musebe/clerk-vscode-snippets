@@ -97,7 +97,7 @@
     ],
     "description": "Snippet for Clerk OrganizationSwitcher in Next.js" // A brief description of the snippet.
   },
-  
+
   // This snippet provides a template for setting up the authMiddleware from Clerk in a Next.js application.
   "Clerk Next.js Middleware": {
     "prefix": "clerkMiddleware", // The prefix used to trigger the snippet in the editor.
@@ -112,5 +112,19 @@
       "};"
     ],
     "description": "Snippet for Clerk middleware setup in Next.js" // A brief description of the snippet.
-  }
+  },
+
+  // This snippet provides a template for setting up Clerk environment variables in a Next.js application.
+  "Clerk Environment Variables": {
+    "prefix": "clerkEnv", // The prefix used to trigger the snippet in the editor.
+    "body": [
+      "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=",
+      "CLERK_SECRET_KEY=",
+      "NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in",
+      "NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up",
+      "NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/",
+      "NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/"
+    ],
+    "description": "Snippet for Clerk environment variables in Next.js" // A brief description of the snippet.
+  },
 }

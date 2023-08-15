@@ -22,9 +22,6 @@
       }
     ]
   },
-  "devDependencies": {
-    "vsce": "^2.15.0"
-  },
   "keywords": [
     "clerk",
     "snippets",
@@ -37,5 +34,8 @@
     "clerk integration"
   ],
   "license": "MIT",
-  "author": "Musebecodes"
+  "author": "Musebecodes",
+  "devDependencies": {
+    "@vscode/vsce": "^2.20.1"
+  }
 }

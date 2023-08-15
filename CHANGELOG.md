@@ -1,9 +1,19 @@
-# Change Log
 
-All notable changes to the "Snippets" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+# Changelog
+
+All notable changes to the `clerk-vscode-snippets` repository will be documented in this file.
 
 ## [Unreleased]
 
-- Initial release
+- Planning to support more languages and frameworks.
+
+## [1.0.0] - 2023-08-15
+
+### Added
+
+- Initial release of VSCode snippets for Clerk components in Next.js.
+- Repository setup with basic README.
+- Added badges and links to README for better guidance.
+
+---

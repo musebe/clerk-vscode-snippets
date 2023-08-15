@@ -88,3 +88,18 @@ If you'd like to contribute to this project, we welcome your contributions! Here
 Thank you for considering contributing to this project!
 
 ---
+
+
+Certainly! Here's how you can structure the **Acknowledgments** section in your README:
+
+---
+
+### **Acknowledgment**:
+
+A special thank you to the following projects and teams:
+
+- **Next.js**: For providing a robust framework that enables efficient React development and server-side rendering. Their comprehensive documentation and active community have been invaluable. [Visit Next.js](https://nextjs.org/)
+
+- **Clerk**: For their user authentication and management solutions that seamlessly integrate with modern applications. Their tools and support have greatly simplified the authentication process. [Visit Clerk](https://clerk.com/)
+
+---

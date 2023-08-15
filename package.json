@@ -1,0 +1,21 @@
+{
+  "name": "Snippets",
+  "displayName": "ClerkDocs Snippets",
+  "description": "This extension provides code snippets for Clerk from its official documentation.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "icon":"icon.png", 
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

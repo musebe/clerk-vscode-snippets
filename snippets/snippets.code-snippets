@@ -1,0 +1,116 @@
+{
+  // This snippet provides a quick way to import Clerk components in Next.js.
+  // After triggering the snippet, the cursor will be placed inside the curly braces,
+  // allowing you to specify which Clerk components you want to import.
+  "Clerk Import with Cursor": {
+    "prefix": "clerkImport", // The prefix used to trigger the snippet.
+    "body": [
+      "import { $1 } from \"@clerk/nextjs\";" // The actual snippet content. $1 denotes where the cursor will be placed.
+    ],
+    "description": "Snippet for Clerk import with cursor placement for components" // A brief description of the snippet.
+  },
+
+  // This snippet provides a quick way to set up a Clerk SignUp page in a Next.js application.
+  "Clerk Next.js SignUp Page": {
+    "prefix": "clerkUp", // The prefix used to trigger the snippet in the editor.
+    "body": [
+      // Import the SignUp component from the Clerk Next.js library.
+      "import { SignUp } from \"@clerk/nextjs\";",
+      "",
+      // Define a functional component named 'SignUpPage'.
+      "const SignUpPage = () => (",
+      // Use the SignUp component with specified properties.
+      "  <SignUp path=\"/sign-up\" routing=\"path\" signInUrl=\"/sign-in\" />",
+      ");",
+      "",
+      // Export the 'SignUpPage' component as the default export.
+      "export default SignUpPage;"
+    ],
+    "description": "Snippet for Clerk SignUp page in Next.js" // A brief description of the snippet.
+  },
+
+  // This snippet provides a template for creating a SignIn page using Clerk in a Next.js application.
+  "Clerk Next.js SignIn Page": {
+    "prefix": "clerkIn", // The prefix used to trigger the snippet in the editor.
+    "body": [
+      "import { SignIn } from \"@clerk/nextjs\";", // Importing the SignIn component from Clerk's Next.js library.
+      "",
+      "const SignInPage = () => (", // Defining a functional component for the SignIn page.
+      "  <SignIn path=\"/sign-in\" routing=\"path\" signUpUrl=\"/sign-up\" />", // Using the SignIn component with specified props.
+      ");",
+      "",
+      "export default SignInPage;" // Exporting the SignInPage component as the default export.
+    ],
+    "description": "Snippet for Clerk SignIn page in Next.js" // A brief description of the snippet.
+  },
+
+  // This snippet provides a quick way to insert the SignOutButton component from Clerk in a Next.js application.
+  "Clerk Next.js SignOutButton": {
+    "prefix": "clerkOutBtn", // The prefix used to trigger the snippet in the editor.
+    "body": [
+      "<SignOutButton/>" // Inserting the SignOutButton component.
+    ],
+    "description": "Snippet for Clerk SignOutButton in Next.js" // A brief description of the snippet.
+  },
+
+  // This snippet provides a quick way to insert the UserButton component from Clerk in a Next.js application.
+  "Clerk Next.js UserButton": {
+    "prefix": "clerkUserBtn", // The prefix used to trigger the snippet in the editor.
+    "body": [
+      "<UserButton/>" // Inserting the UserButton component.
+    ],
+    "description": "Snippet for Clerk UserButton in Next.js" // A brief description of the snippet.
+  },
+
+  // This snippet provides a quick way to insert the UserProfile component from Clerk in a Next.js application.
+  "Clerk Next.js UserProfile": {
+    "prefix": "clerkUserProfile", // The prefix used to trigger the snippet in the editor.
+    "body": [
+      "<UserProfile/>" // Inserting the UserProfile component.
+    ],
+    "description": "Snippet for Clerk UserProfile in Next.js" // A brief description of the snippet.
+  },
+
+  // This snippet provides a quick way to insert the OrganizationProfile component in a Next.js application.
+  "Clerk Next.js OrganizationProfile": {
+    "prefix": "clerkOrgP", // The prefix used to trigger the snippet in the editor.
+    "body": [
+      "<OrganizationProfile/>" // Inserting the OrganizationProfile component.
+    ],
+    "description": "Snippet for Clerk OrganizationProfile in Next.js" // A brief description of the snippet.
+  },
+
+  // This snippet provides a quick way to insert the CreateOrganization component in a Next.js application.
+  "Clerk Next.js CreateOrganization": {
+    "prefix": "clerkOrgC", // The shortened prefix used to trigger the snippet in the editor.
+    "body": [
+      "<CreateOrganization/>" // Inserting the CreateOrganization component.
+    ],
+    "description": "Snippet for Clerk CreateOrganization in Next.js" // A brief description of the snippet.
+  },
+
+  // This snippet provides a quick way to insert the OrganizationSwitcher component in a Next.js application.
+  "Clerk Next.js OrganizationSwitcher": {
+    "prefix": "clerkOrgS", // The concise prefix used to trigger the snippet in the editor.
+    "body": [
+      "<OrganizationSwitcher/>" // Inserting the OrganizationSwitcher component.
+    ],
+    "description": "Snippet for Clerk OrganizationSwitcher in Next.js" // A brief description of the snippet.
+  },
+  
+  // This snippet provides a template for setting up the authMiddleware from Clerk in a Next.js application.
+  "Clerk Next.js Middleware": {
+    "prefix": "clerkMiddleware", // The prefix used to trigger the snippet in the editor.
+    "body": [
+      "import { authMiddleware } from \"@clerk/nextjs\";",
+      "export default authMiddleware({",
+      "  publicRoutes: [\"/\"]",
+      "});",
+      "",
+      "export const config = {",
+      "  matcher: [\"/((?!.*\\\\..*|_next).*)\", \"/\", \"/(api|trpc)(.*)\"],",
+      "};"
+    ],
+    "description": "Snippet for Clerk middleware setup in Next.js" // A brief description of the snippet.
+  }
+}

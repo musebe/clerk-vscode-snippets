@@ -8,6 +8,22 @@ All notable changes to the `clerk-vscode-snippets` repository will be documented
 
 - Planning to support more languages and frameworks.
 
+Sure, here's a simple changelog based on the two versions you provided:
+
+## Changelog
+
+### Version [0.1.2] - 2023-08-16
+### Workflow Setup:
+  - Added GitHub Actions workflow YAML file for automated CI/CD.
+  - Triggered the workflow on pushes to the main branch and when a release is created.
+  - Included steps to install Node.js, run tests, and execute the "npm run deploy" command for publishing.
+
+### Version [0.1.1] - 2023-08-16
+
+### Testing:
+  - Integrated a testing step in the Makefile to ensure code quality.
+  - Implemented the "test" target to run tests using the command `npm test`.
+
 ## [1.0.0] - 2023-08-15
 
 ### Added

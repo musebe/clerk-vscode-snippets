@@ -127,4 +127,110 @@
     ],
     "description": "Snippet for Clerk environment variables in Next.js" // A brief description of the snippet.
   },
+  // This snippet provides a method to use the auth() helper function with Clerk in a Next.js application.
+  "Clerk Auth Function": {
+    "prefix": "clerkAuth",
+    "body": [
+      "// Import at the top of the file",
+      "import { auth } from '@clerk/nextjs';",
+      "const { userId } = auth();"
+    ],
+    "description": "Snippet for using the auth() helper function with Clerk in Next.js."
+  },
+  // This snippet provides a method to fetch the current user using Clerk in a Next.js application.
+  "Clerk Current User": {
+    "prefix": "clerkCurrentUser",
+    "body": [
+      "// Import at the top of the file",
+      "import { currentUser } from '@clerk/nextjs';",
+      "const user = await currentUser();"
+    ],
+    "description": "Snippet for fetching the current user using Clerk in Next.js."
+  },
+  // This snippet uses the getAuth() helper to retrieve the authentication state, allowing you to protect your API routes or gather relevant data.
+  "Clerk GetAuth API Route": {
+    "prefix": "clerkGetAuthAPI",
+    "body": [
+      "// Import necessary modules at the top of the file",
+      "import { getAuth } from '@clerk/nextjs/server';",
+      "import type { NextApiRequest, NextApiResponse } from 'next';",
+      "",
+      "export default async function handler(",
+      "  req: NextApiRequest,",
+      "  res: NextApiResponse",
+      ") {",
+      "  const { userId } = getAuth(req);",
+      "  // Load any data your application needs for the API route",
+      "  return res.status(200).json({ userId: userId });",
+      "}"
+    ],
+    "description": "Snippet for using the getAuth() helper with Clerk in a Next.js API route."
+  },
+  // This snippet demonstrates how to use the `clerkClient` helper to directly interact with the Clerk API. This is useful for updating data or retrieving the full User object.
+  "Clerk Client API Route": {
+    "prefix": "clerkClientAPI",
+    "body": [
+      "// Import necessary modules at the top of the file",
+      "import { getAuth, clerkClient } from '@clerk/nextjs/server';",
+      "import type { NextApiRequest, NextApiResponse } from 'next';",
+      "",
+      "export default async function handler(",
+      "  req: NextApiRequest,",
+      "  res: NextApiResponse",
+      ") {",
+      "  const { userId } = getAuth(req);",
+      "  if (!userId) {",
+      "    return res.status(401).json({ error: 'Unauthorized' });",
+      "  }",
+      "  const user = userId ? await clerkClient.users.getUser(userId) : null;",
+      "  // Use the user object to decide what data to return",
+      "  return res.status(200).json({});",
+      "}"
+    ],
+    "description": "Snippet for using the `clerkClient` helper with Clerk in a Next.js API route."
+  },
+  // This snippet demonstrates how to use the `useAuth` hook to access the current auth state in a Next.js application. This hook provides minimal information needed for data-loading and helper methods to manage the current active session.
+  "Clerk UseAuth Hook": {
+    "prefix": "clerkUseAuth",
+    "body": [
+      "// `use client` required for app router",
+      "import { useAuth } from '@clerk/nextjs';",
+      "",
+      "const { isLoaded, userId, sessionId, getToken } = useAuth();",
+      "",
+      "// In case the user signs out while on the page.",
+      "if (!isLoaded || !userId) {",
+      "  return null;",
+      "}"
+    ],
+    "description": "Snippet for using the `useAuth` hook with Clerk in a Next.js application."
+  },
+  // This snippet demonstrates how to use the `useUser` hook to access the current user data in a Next.js application. This hook provides user data and helper methods to manage the current active session.
+  "Clerk UseUser Hook": {
+    "prefix": "clerkUseUser",
+    "body": [
+      "// `use client` required for app router",
+      "import { useUser } from '@clerk/nextjs';",
+      "",
+      "const { isLoaded, isSignedIn, user } = useUser();",
+      "",
+      "// In case the user is not loaded or not signed in.",
+      "if (!isLoaded || !isSignedIn) {",
+      "  return null;",
+      "}"
+    ],
+    "description": "Snippet for using the `useUser` hook with Clerk in a Next.js application."
+  },
+  // This snippet demonstrates how to use the `<ClerkProvider>` component to wrap your Next.js application. This component provides active session and user context to Clerk's hooks and other components.
+  "Clerk Provider Component": {
+    "prefix": "clerkProvider",
+    "body": [
+      "import { ClerkProvider } from '@clerk/nextjs';",
+      "",
+      "<ClerkProvider>",
+      "  // Your app components go here",
+      "</ClerkProvider>"
+    ],
+    "description": "Snippet for using the `<ClerkProvider>` component with Clerk in a Next.js application."
+  }
 }

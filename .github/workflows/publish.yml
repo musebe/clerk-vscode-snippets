@@ -33,6 +33,16 @@ jobs:
     - name: Run Tests
       run: npm test
 
+    # Check for unstaged changes and commit them
+    - name: Check for unstaged changes
+      run: |
+        if ! git diff-index --quiet HEAD --; then
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "chore: Commit unstaged changes before version bump"
+        fi
+
     # Bump version based on commit message
     - name: Bump version and create changelog
       run: |
@@ -56,7 +66,3 @@ jobs:
       run: npm run deploy
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}
-
-
-
-        

@@ -52,7 +52,21 @@ push-main:
 		echo "Please apply the necessary patches before pushing."; \
 	fi
 
-# Default target
-all: commit push-main
+# Version selection
+select-version:
+	@echo "Select version type:"
+	@echo "1) Major version"
+	@echo "2) Minor version"
+	@echo "3) Patch version"
+	@read -p "Enter number (1-3): " version_selection; \
+	case $$version_selection in \
+		1) npm version major;; \
+		2) npm version minor;; \
+		3) npm version patch;; \
+		*) echo "Invalid selection"; exit 1;; \
+	esac
 
-.PHONY: commit test push-main all
+# Default target
+all: select-version commit push-main
+
+.PHONY: commit test push-main all select-version

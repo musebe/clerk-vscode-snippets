@@ -33,17 +33,6 @@ jobs:
       - name: Run Tests
         run: npm test
 
-      # Bump version based on commit message
-      - name: Bump version and create changelog
-        run: |
-          if git log -1 --pretty=%B | grep -q "\[major\]"; then
-            npm run version:major
-          elif git log -1 --pretty=%B | grep -q "\[minor\]"; then
-            npm run version:minor
-          else
-            npm run version:patch
-          fi
-
       - name: Publish
         run: npm run deploy
         env:

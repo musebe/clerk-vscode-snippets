@@ -44,6 +44,13 @@ push-main:
 	@read -p "Have you applied all necessary patches? (yes/no): " patches; \
 	if [ "$$patches" = "yes" ]; then \
 		if [ "$(BRANCH)" = "main" ]; then \
+			read -p "Select version bump: 1) Major 2) Minor 3) Patch: " version_selection; \
+			case $$version_selection in \
+				1) npm version major;; \
+				2) npm version minor;; \
+				3) npm version patch;; \
+				*) echo "Invalid version selection"; exit 1;; \
+			esac; \
 			git push origin main; \
 		else \
 			echo "You are not on the main branch. Switch to main before pushing."; \
@@ -52,21 +59,7 @@ push-main:
 		echo "Please apply the necessary patches before pushing."; \
 	fi
 
-# Version selection
-select-version:
-	@echo "Select version type:"
-	@echo "1) Major version"
-	@echo "2) Minor version"
-	@echo "3) Patch version"
-	@read -p "Enter number (1-3): " version_selection; \
-	case $$version_selection in \
-		1) npm version major;; \
-		2) npm version minor;; \
-		3) npm version patch;; \
-		*) echo "Invalid selection"; exit 1;; \
-	esac
-
 # Default target
-all: select-version commit push-main
+all: commit push-main
 
-.PHONY: commit test push-main all select-version
+.PHONY: commit test push-main all

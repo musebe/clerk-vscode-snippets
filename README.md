@@ -13,9 +13,7 @@ This extension provides a collection of snippets for Clerk components and setups
 
 ## 📝 Snippets
 
-Certainly! Here's the table with numbering and a more structured format:
-
----
+This table provides a comprehensive overview of the Clerk snippets available for Next.js. Each snippet is designed to streamline the development process, ensuring efficient and consistent code integration.
 
 ### Clerk Snippets for Next.js
 
@@ -40,9 +38,6 @@ Certainly! Here's the table with numbering and a more structured format:
 | 17. | `clerkUseUser`      | Uses the `useUser` hook to access the current user data in Next.js. |
 | 18. | `clerkProvider`     | Wraps your Next.js application with the `<ClerkProvider>` component. |
 
----
-
-This table provides a comprehensive overview of the Clerk snippets available for Next.js. Each snippet is designed to streamline the development process, ensuring efficient and consistent code integration.
 
 ## 🛠 Usage
 

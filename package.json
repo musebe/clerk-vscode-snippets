@@ -2,7 +2,7 @@
   "name": "clerkdocs-snippets",
   "displayName": "ClerkDocs Snippets",
   "description": "This extension provides code snippets for Clerk from its official documentation.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "engines": {
     "vscode": "^1.81.0"
   },

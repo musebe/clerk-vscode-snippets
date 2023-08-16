@@ -1,3 +1,4 @@
+# This workflow is triggered on pushes to the main branch and when a release is created.
 on:
   push:
     branches:
@@ -8,16 +9,39 @@ on:
 
 jobs:
   build:
+    # Specifies the type of runner that the job will run on.
     runs-on: ubuntu-latest
+
     steps:
+    # Checks out a copy of your repository on the ubuntu-latest machine.
     - name: Checkout
       uses: actions/checkout@v3
+
+    # Caches node modules to speed up the workflow.
+    - name: Cache node modules
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    # Sets up a specific version of Node.js to use in the workflow.
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
+
+    # Installs the project's dependencies.
     - run: npm install
+
+    # Runs the tests using the 'npm test' command.
+    - name: Run Tests
+      run: npm test
+
+    # Publishes the extension to the Visual Studio Marketplace.
     - name: Publish
       run: npm run deploy
       env:
+        # Uses the VSCE_PAT secret from the repository's settings.
         VSCE_PAT: ${{ secrets.VSCE_PAT }}

@@ -36,10 +36,15 @@
   "license": "MIT",
   "author": "Musebecodes",
   "devDependencies": {
-    "@vscode/vsce": "^2.20.1"
+    "@vscode/vsce": "^2.20.1",
+    "jest": "^29.6.2"
   },
   "scripts": {
-    "deploy": "vsce publish"
+    "deploy": "vsce publish",
+    "test": "jest"
   },
-  "publisher": "Musebe"
+  "publisher": "Musebe",
+  "dependencies": {
+    "jsonc-parser": "^3.2.0"
+  }
 }

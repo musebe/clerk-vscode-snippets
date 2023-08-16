@@ -35,10 +35,8 @@
   ],
   "license": "MIT",
   "author": "Musebecodes",
-  "scripts": {
-    "deploy": "vsce publish"
-  },
   "devDependencies": {
     "@vscode/vsce": "^2.20.1"
-  }
+  },
+  "publisher": "Musebe"
 }

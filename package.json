@@ -41,5 +41,5 @@
   "scripts": {
     "deploy": "vsce publish"
   },
-  "publisher": "Eugene Musebe"
+  "publisher": "Musebe"
 }

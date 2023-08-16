@@ -1,5 +1,3 @@
-Certainly! Here's the updated `README.md` file with links to Clerk and Next.js:
-
 ---
 
 # Clerk VSCode Snippets for Next.js

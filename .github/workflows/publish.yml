@@ -2,67 +2,49 @@
 on:
   push:
     branches:
-    - main
+      - main
   release:
     types:
-    - created
+      - created
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Cache node modules
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-    - name: Install Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16.x
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
 
-    - run: npm install
+      - run: npm install
 
-    - name: Run Tests
-      run: npm test
+      - name: Run Tests
+        run: npm test
 
-    # Check for unstaged changes and commit them
-    - name: Check for unstaged changes
-      run: |
-        if ! git diff-index --quiet HEAD --; then
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add -A
-          git commit -m "chore: Commit unstaged changes before version bump"
-        fi
+      # Bump version based on commit message
+      - name: Bump version and create changelog
+        run: |
+          if git log -1 --pretty=%B | grep -q "\[major\]"; then
+            npm run version:major
+          elif git log -1 --pretty=%B | grep -q "\[minor\]"; then
+            npm run version:minor
+          else
+            npm run version:patch
+          fi
 
-    # Bump version based on commit message
-    - name: Bump version and create changelog
-      run: |
-        if git log -1 --pretty=%B | grep -q "\[major\]"; then
-          npm run version:major
-        elif git log -1 --pretty=%B | grep -q "\[minor\]"; then
-          npm run version:minor
-        else
-          npm run version:patch
-        fi
-
-    # Commit the version bump
-    - name: Commit changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -am "Bump version [skip ci]"
-        git push
-
-    - name: Publish
-      run: npm run deploy
-      env:
-        VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      - name: Publish
+        run: npm run deploy
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}

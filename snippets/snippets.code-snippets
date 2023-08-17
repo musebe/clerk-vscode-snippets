@@ -236,7 +236,7 @@
 
   // This snippet provides a method to access the current active organization's attributes using Clerk in a Next.js application.
   "Clerk UseOrganization Hook": {
-    "prefix": "clerkUseOrganization",
+    "prefix": "clerkUseOrg",
     "body": [
       "// Import at the top of the file",
       "import { useOrganization } from '@clerk/nextjs';",
@@ -258,7 +258,7 @@
   },
   // This snippet provides a method to access the list of available Organizations and OrganizationMemberships the user belongs to using Clerk in a Next.js application.
   "Clerk UseOrganizationList Hook": {
-    "prefix": "clerkUseOrganizationList",
+    "prefix": "clerkUseOrgList",
     "body": [
       "const {",
       "  isLoaded,",

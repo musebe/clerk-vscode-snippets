@@ -38,7 +38,13 @@ This table provides a comprehensive overview of the Clerk snippets available for
 | 17. | `clerkUseUser`          | Uses the `useUser` hook to access the current user data in Next.js. |
 | 18. | `clerkProvider`         | Wraps your Next.js application with the `<ClerkProvider>` component. |
 | 19. | `clerkUseOrg`           | Snippet for accessing the current active organization's attributes using Clerk in Next.js. |
-| 20. | `clerkUseOrgList`| Snippet for accessing the list of available Organizations and OrganizationMemberships using Clerk in Next.js.|
+| 20. | `clerkUseOrgList`       | Snippet for accessing the list of available Organizations and OrganizationMemberships using Clerk in Next.js.|
+| 21. | `clerkUserListOrd`      | Snippet for retrieving an ordered and filtered list of users using Clerk in Next.js. |
+| 22. | `clerkGetUser`          | Snippet for retrieving a single user by their ID using Clerk in Next.js. |
+| 23. | `clerkUpdateUser`       | Snippet for updating a user's attributes using Clerk in Next.js. |
+| 24. | `clerkDeleteUser`       | Snippet for deleting a user with a given ID using Clerk in Next.js. |
+| 25. | `clerkGetUserCount`     | Snippet for retrieving the total number of users or a filtered count using Clerk in Next.js. |
+
 
 
 ## 🛠 Usage

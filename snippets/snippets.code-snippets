@@ -268,5 +268,93 @@
       "} = useOrganizationList();"
     ],
     "description": "Snippet for accessing the list of available Organizations and OrganizationMemberships the user belongs to using Clerk in Next.js."
+  },
+  // This snippet retrieves a list of users using Clerk.
+  "Clerk User List": {
+    "prefix": "clerkUserList",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "const users = await clerkClient.users.getUserList();"
+    ],
+    "description": "Snippet for retrieving a list of users using Clerk in Next.js."
+  },
+
+  // This snippet retrieves a list of users using Clerk that is ordered and filtered by the number of results.
+  "Clerk Ordered User List": {
+    "prefix": "clerkUserListOrd",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Retrieves user list that is ordered and filtered by the number of results.",
+      "const sessions = await clerkClient.users.getUserList({",
+      "  orderBy: '-created_at',",
+      "  limit: 10,",
+      "});"
+    ],
+    "description": "Snippet for retrieving an ordered and filtered list of users using Clerk in Next.js."
+  },
+
+  //getUser(userId) Retrieves a single user by their id, if the id is valid. Throws an error otherwise.
+
+  "Clerk Get Single User": {
+    "prefix": "clerkGetUser",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Retrieves a single user by their ID",
+      "const userId = 'my-user-id';",
+      "const user = await clerkClient.users.getUser(userId);"
+    ],
+    "description": "Snippet for retrieving a single user by their ID using Clerk in Next.js."
+  },
+  //getCount(params?: UserCountParams) Retrieves the total number of users.
+
+  "Clerk Get User Count": {
+    "prefix": "clerkGetUserCount",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Retrieves the total number of users",
+      "const totalUsers = await clerkClient.users.getCount();",
+      "",
+      "// Optional: Retrieves the total number of users matching a specific query",
+      "// const totalUsersMatchingTest = await clerkClient.users.getCount({ query: 'test' });"
+    ],
+    "description": "Snippet for retrieving the total number of users or the total number of users matching a specific query using Clerk in Next.js."
+  },
+  // updateUser(userId, params)
+  // Updates a user with a given id with attribute values provided in a params object.
+
+  "Clerk Update User": {
+    "prefix": "clerkUpdateUser",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "const userId = 'my-user-id';",
+      "const params = { firstName: 'John', lastName: 'Wick' };",
+      "// See table below for all supported attributes",
+      "const user = await clerkClient.users.updateUser(userId, params);"
+    ],
+    "description": "Snippet for updating a user with a given ID and provided attribute values using Clerk in Next.js."
+  },
+  // deleteUser(userId)
+  // Deletes a user given a valid id. Throws an error otherwise.
+
+  "Clerk Delete User": {
+    "prefix": "clerkDeleteUser",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "const userId = 'my-user-id';",
+      "const user = await clerkClient.users.deleteUser(userId);"
+    ],
+    "description": "Snippet for deleting a user with a given ID using Clerk in Next.js."
   }
 }
+

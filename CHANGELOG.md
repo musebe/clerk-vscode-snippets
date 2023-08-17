@@ -11,6 +11,16 @@ All notable changes to the `clerk-vscode-snippets` repository will be documented
 Sure, here's a simple changelog based on the two versions you provided:
 
 ## Changelog
+### Version [0.2.1 ]- 2023-08-17
+
+**Tests for Multi-file Support**:
+- Added tests to ensure compatibility and functionality across multiple files.
+
+### Version [0.2.0]- 2023-08-17
+
+**TypeScript Support**:
+- Introduced TypeScript support to enhance type safety and developer experience.
+
 
 ### Version [0.1.2] - 2023-08-16
 ### Workflow Setup:

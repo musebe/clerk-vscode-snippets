@@ -8,8 +8,6 @@ All notable changes to the `clerk-vscode-snippets` repository will be documented
 
 - Planning to support more languages and frameworks.
 
-Sure, here's a simple changelog based on the two versions you provided:
-
 ## Changelog
 ### Version [0.2.1 ]- 2023-08-17
 

@@ -7,8 +7,6 @@ All notable changes to the `clerk-vscode-snippets` repository will be documented
 ## [Unreleased]
 
 - Planning to support more languages and frameworks.
-
-## Changelog
 ### Version [0.2.1 ]- 2023-08-17
 
 **Tests for Multi-file Support**:

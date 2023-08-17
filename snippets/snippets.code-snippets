@@ -232,5 +232,41 @@
       "</ClerkProvider>"
     ],
     "description": "Snippet for using the `<ClerkProvider>` component with Clerk in a Next.js application."
+  },
+
+  // This snippet provides a method to access the current active organization's attributes using Clerk in a Next.js application.
+  "Clerk UseOrganization Hook": {
+    "prefix": "clerkUseOrganization",
+    "body": [
+      "// Import at the top of the file",
+      "import { useOrganization } from '@clerk/nextjs';",
+      "",
+      "const useOrganizationParams = {",
+      "  invitationList: { limit, offset },  // Pagination parameters for invitations",
+      "  membershipList: { limit, offset }   // Pagination parameters for memberships",
+      "};",
+      "",
+      "const {",
+      "  isLoaded,",
+      "  organization,",
+      "  invitationList,",
+      "  membershipList,",
+      "  membership,",
+      "} = useOrganization(useOrganizationParams);"
+    ],
+    "description": "Snippet for accessing the current active organization's attributes using Clerk in Next.js."
+  },
+  // This snippet provides a method to access the list of available Organizations and OrganizationMemberships the user belongs to using Clerk in a Next.js application.
+  "Clerk UseOrganizationList Hook": {
+    "prefix": "clerkUseOrganizationList",
+    "body": [
+      "const {",
+      "  isLoaded,",
+      "  organizationList,",
+      "  createOrganization,",
+      "  setActive,",
+      "} = useOrganizationList();"
+    ],
+    "description": "Snippet for accessing the list of available Organizations and OrganizationMemberships the user belongs to using Clerk in Next.js."
   }
 }

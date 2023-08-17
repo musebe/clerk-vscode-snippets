@@ -17,26 +17,28 @@ This table provides a comprehensive overview of the Clerk snippets available for
 
 ### Clerk Snippets for Next.js
 
-| No. | Prefix              | Description                                               |
-|-----|---------------------|-----------------------------------------------------------|
-| 1.  | `clerkImport`       | Inserts a Clerk import with cursor placement for components. |
-| 2.  | `clerkUp`           | Sets up a Clerk SignUp page in Next.js.                   |
-| 3.  | `clerkIn`           | Sets up a Clerk SignIn page in Next.js.                   |
-| 4.  | `clerkOutBtn`       | Inserts the `<SignOutButton/>` component.                 |
-| 5.  | `clerkUserBtn`      | Inserts the `<UserButton/>` component.                    |
-| 6.  | `clerkUserProfile`  | Inserts the `<UserProfile/>` component.                   |
-| 7.  | `clerkOrgP`         | Inserts the `<OrganizationProfile/>` component.           |
-| 8.  | `clerkOrgC`         | Inserts the `<CreateOrganization/>` component.            |
-| 9.  | `clerkOrgS`         | Inserts the `<OrganizationSwitcher/>` component.          |
-| 10. | `clerkMiddleware`   | Sets up the authMiddleware from Clerk in Next.js.         |
-| 11. | `clerkEnv`          | Sets up Clerk environment variables in Next.js.           |
-| 12. | `clerkAuth`         | Uses the auth() helper function with Clerk in Next.js.    |
-| 13. | `clerkCurrentUser`  | Fetches the current user using Clerk in Next.js.          |
-| 14. | `clerkGetAuthAPI`   | Uses the getAuth() helper with Clerk in a Next.js API route. |
-| 15. | `clerkClientAPI`    | Interacts directly with the Clerk API in a Next.js API route. |
-| 16. | `clerkUseAuth`      | Uses the `useAuth` hook to access the current auth state in Next.js. |
-| 17. | `clerkUseUser`      | Uses the `useUser` hook to access the current user data in Next.js. |
-| 18. | `clerkProvider`     | Wraps your Next.js application with the `<ClerkProvider>` component. |
+| No. | Prefix                  | Description                                               |
+|-----|-------------------------|-----------------------------------------------------------|
+| 1.  | `clerkImport`           | Inserts a Clerk import with cursor placement for components. |
+| 2.  | `clerkUp`               | Sets up a Clerk SignUp page in Next.js.                   |
+| 3.  | `clerkIn`               | Sets up a Clerk SignIn page in Next.js.                   |
+| 4.  | `clerkOutBtn`           | Inserts the `<SignOutButton/>` component.                 |
+| 5.  | `clerkUserBtn`          | Inserts the `<UserButton/>` component.                    |
+| 6.  | `clerkUserProfile`      | Inserts the `<UserProfile/>` component.                   |
+| 7.  | `clerkOrgP`             | Inserts the `<OrganizationProfile/>` component.           |
+| 8.  | `clerkOrgC`             | Inserts the `<CreateOrganization/>` component.            |
+| 9.  | `clerkOrgS`             | Inserts the `<OrganizationSwitcher/>` component.          |
+| 10. | `clerkMiddleware`       | Sets up the authMiddleware from Clerk in Next.js.         |
+| 11. | `clerkEnv`              | Sets up Clerk environment variables in Next.js.           |
+| 12. | `clerkAuth`             | Uses the auth() helper function with Clerk in Next.js.    |
+| 13. | `clerkCurrentUser`      | Fetches the current user using Clerk in Next.js.          |
+| 14. | `clerkGetAuthAPI`       | Uses the getAuth() helper with Clerk in a Next.js API route. |
+| 15. | `clerkClientAPI`        | Interacts directly with the Clerk API in a Next.js API route. |
+| 16. | `clerkUseAuth`          | Uses the `useAuth` hook to access the current auth state in Next.js. |
+| 17. | `clerkUseUser`          | Uses the `useUser` hook to access the current user data in Next.js. |
+| 18. | `clerkProvider`         | Wraps your Next.js application with the `<ClerkProvider>` component. |
+| 19. | `clerkUseOrg`           | Snippet for accessing the current active organization's attributes using Clerk in Next.js. |
+| 20. | `clerkUseOrgList`| Snippet for accessing the list of available Organizations and OrganizationMemberships using Clerk in Next.js.|
 
 
 ## 🛠 Usage

@@ -2,9 +2,12 @@
 
 [![Clerk Badge](https://img.shields.io/badge/Clerk-Next.js-blue)](https://www.clerk.dev/)
 [![Next.js Badge](https://img.shields.io/badge/Next.js-13.0.0-black)](https://nextjs.org/)
+[![DEV.to](https://img.shields.io/badge/DEV.to-%230A0A0A.svg?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/musebe/clerkdocs-for-vscode-essential-snippets-for-clerk-components-ho1)
+
 
 This extension provides a collection of snippets for Clerk components and setups in a Next.js application.
 
+For a detailed walkthrough and insights on using these snippets, check out our [Dev.to article on ClerkDocs for VSCode](https://dev.to/musebe/clerkdocs-for-vscode-essential-snippets-for-clerk-components-ho1).
 ## ⚙️ Installation
 
 1. Open VSCode.
@@ -14,6 +17,9 @@ This extension provides a collection of snippets for Clerk components and setups
 ## 📝 Snippets
 
 This table provides a comprehensive overview of the Clerk snippets available for Next.js. Each snippet is designed to streamline the development process, ensuring efficient and consistent code integration.
+
+[Download the PDF version of Clerk Snippets for Next.js](https://res.cloudinary.com/hackit-africa/image/upload/v1692367937/clerkdocs.pdf)
+
 
 
 | No | Prefix                    | Description                                                                                                                       |

@@ -355,6 +355,214 @@
       "const user = await clerkClient.users.deleteUser(userId);"
     ],
     "description": "Snippet for deleting a user with a given ID using Clerk in Next.js."
+  },
+
+  // createOrganization(params) Creates an organization.
+
+  "Clerk Create Organization": {
+    "prefix": "clerkCreateOrg",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Creates an organization.",
+      "const organizationID = 'my-organization-id';",
+      "const createdBy = 'my-user-id';",
+      "const organization = await clerkClient.organizations.createOrganization({organizationID, createdBy});"
+    ],
+    "description": "Snippet for creating an organization using Clerk in Next.js."
+  },
+  // createOrganizationInvitation(params) Creates an invitation for new users to join an organization.
+
+  "Clerk Create Org Invitation": {
+    "prefix": "clerkCreateOrgInv",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Creates an invitation for new users to join an organization.",
+      "const name = 'my-organization-name';",
+      "const inviterUserId = 'my-user-id';",
+      "const emailAddress = 'user-email-address';",
+      "const role = 'role-to-assign-user';",
+      "const organization = await clerkClient.organizations.createOrganizationInvitation({name, inviterUserId, emailAddress, role});"
+    ],
+    "description": "Snippet for creating an invitation for new users to join an organization using Clerk in Next.js."
+  },
+
+  // createOrganizationMembership(params) Creates membership to an organization for a user directly (circumventing the need for an invitation).
+
+  "Clerk Create Org Membership": {
+    "prefix": "clerkCreateOrgMem",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Creates membership to an organization for a user directly.",
+      "const organizationId = 'my-organization-id';",
+      "const userId = 'my-user-id';",
+      "const role = 'role-to-assign-user';",
+      "const organization = await clerkClient.organizations.createOrganizationMembership({organizationId, userId, role});"
+    ],
+    "description": "Snippet for creating a membership to an organization for a user directly using Clerk in Next.js."
+  },
+  // deleteOrganization(organizationId) Deletes an organization given a valid id. Throws an error otherwise.
+
+  "Clerk Delete Org": {
+    "prefix": "clerkDeleteOrg",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Deletes an organization given a valid id.",
+      "const organizationId = 'my-organization-id';",
+      "const organization = await clerkClient.organizations.deleteOrganization(organizationId);"
+    ],
+    "description": "Snippet for deleting an organization using Clerk in Next.js."
+  },
+  // deleteOrganizationMembership(params) Removes a user from the specified organization.
+
+  "Clerk Delete Org Membership": {
+    "prefix": "clerkDeleteOrgMem",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Removes a user from the specified organization.",
+      "const organizationId = 'my-organization-id';",
+      "const userId = 'my-user-id';",
+      "const organization = await clerkClient.organizations.deleteOrganizationMembership({organizationId, userId});"
+    ],
+    "description": "Snippet for removing a user from an organization using Clerk in Next.js."
+  },
+  // getOrganization(params) Retrieves a single organization by the organization id, if the id is valid. Throws an error otherwise.
+
+  "Clerk Get Organization": {
+    "prefix": "clerkGetOrg",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Retrieves a single organization by the organization id.",
+      "const organizationId = 'my-organization-id';",
+      "const organization = await clerkClient.organizations.getOrganization({",
+      "  organizationId",
+      "});"
+    ],
+    "description": "Snippet for retrieving a single organization by its ID using Clerk in Next.js."
+  },
+  // getOrganizationList(params?: GetOrganizationListParams) Retrieves organization list:
+
+  "Clerk Get Organization List": {
+    "prefix": "clerkGetOrgList",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Retrieves organization list.",
+      "const organizations = await clerkClient.organizations.getOrganizationList();"
+    ],
+    "description": "Snippet for retrieving a list of organizations using Clerk in Next.js."
+  },
+
+  // getOrganizationMembershipList(params) Retrieves organization membership list:
+
+  "Clerk Get Organization Membership List": {
+    "prefix": "clerkGetOrgMemList",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Retrieves organization membership list.",
+      "const memberships = await clerkClient.organizations.getOrganizationMembershipList();",
+      "",
+      "// Alternatively, with parameters:",
+      "// const memberships = await clerkClient.organizations.getOrganizationMembershipList({",
+      "//   limit: 10,",
+      "// });"
+    ],
+    "description": "Snippet for retrieving a list of organization memberships using Clerk in Next.js."
+  },
+  // getPendingOrganizationInvitationList(params) Retrieves a list of organization invitations that have not yet been accepted.
+
+  "Clerk Get Pending Org Invitations": {
+    "prefix": "clerkGetPendOrgInv",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Retrieves a list of pending organization invitations.",
+      "const invitations = await clerkClient.organizations.getPendingOrganizationInvitationList();",
+      "",
+      "// Alternatively, with parameters:",
+      "// const invitations = await clerkClient.organizations.getPendingOrganizationInvitationList({",
+      "//   limit: 10,",
+      "// });"
+    ],
+    "description": "Snippet for retrieving a list of pending organization invitations using Clerk in Next.js."
+  },
+  // revokeOrganizationInvitation(params) Revokes an organization invitation from a user for the specified organization.
+
+  "Clerk Revoke Org Invitation": {
+    "prefix": "clerkRevokeOrgInv",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Revokes an organization invitation from a user.",
+      "const organizationId = 'my-organization-id';",
+      "const invitationId = 'my-invitation-id';",
+      "const requestingUserId = 'my-user-id';",
+      "const organization = await clerkClient.organizations.revokeOrganizationInvitation({organizationId, invitationId, requestingUserId});"
+    ],
+    "description": "Snippet for revoking an organization invitation using Clerk in Next.js."
+  },
+  // updateOrganization(organizationId, params) Updates the organization name.
+
+  "Clerk Update Organization": {
+    "prefix": "clerkUpdateOrg",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Updates the organization name.",
+      "const name = 'my-organization-name';",
+      "const organization = await clerkClient.organizations.updateOrganization(name);"
+    ],
+    "description": "Snippet for updating the organization name using Clerk in Next.js."
+  },
+  // updateOrganizationMetadata(organizationId, params) Updates the metadata associated with the specified organization id.
+
+  "Clerk Update Org Metadata": {
+    "prefix": "clerkUpdateOrgMeta",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Updates the metadata associated with the specified organization id.",
+      "const update = clerkClient.organizations.updateOrganizationMetadata('id', {",
+      "  publicMetadata: {",
+      "    'example': 'metadata'",
+      "  }",
+      "});"
+    ],
+    "description": "Snippet for updating the metadata associated with a specified organization id using Clerk in Next.js."
+  },
+  // updateOrganizationMembershipMetadata(params) Updates the metadata associated with a user's organization membership.
+
+  "Clerk Update Org Mem Meta": {
+    "prefix": "clerkUpOrgMemMeta",
+    "body": [
+      "// Import at the top of the file",
+      "import { clerkClient } from '@clerk/nextjs';",
+      "",
+      "// Updates the metadata associated with a user's organization membership.",
+      "const update = clerkClient.organizations.updateOrganizationMembershipMetadata('id', {",
+      "  publicMetadata: {",
+      "    'example': 'metadata'",
+      "  }",
+      "});"
+    ],
+    "description": "Snippet for updating the metadata associated with a user's organization membership using Clerk in Next.js."
   }
 }
-
